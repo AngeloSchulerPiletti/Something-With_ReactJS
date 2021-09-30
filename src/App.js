@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="app_container flex_c">
         <Header />
         <Main />
         <Footer />

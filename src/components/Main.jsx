@@ -10,12 +10,15 @@ export default class Main extends Component {
     };
   }
 
-  addTask(title, description, type){
-    const newTask = {title, description, type};
+  addTask(title, description, type) {
+    if ((title === "") | (description === "") | (type === "")) {
+      return;
+    }
+    const newTask = { title, description, type };
     const newTasksArr = [...this.state.tasks, newTask];
     const newState = {
-      tasks:newTasksArr
-    }
+      tasks: newTasksArr,
+    };
     this.setState(newState);
   }
 
@@ -23,10 +26,10 @@ export default class Main extends Component {
     return (
       <main>
         <div>
-          <TaskCreator addTask={this.addTask.bind(this)}/>
+          <TaskCreator addTask={this.addTask.bind(this)} />
         </div>
         <div>
-          <TaskList tasks={this.state.tasks}/>
+          <TaskList tasks={this.state.tasks} />
         </div>
       </main>
     );

@@ -1,0 +1,12 @@
+@use "../abstract" as *;
+
+.header{
+    background: linear-gradient(170deg, darken($blue, 20%), $blue, darken($blue, 20%));
+    padding: 1vw 4vw;
+    margin-bottom: 2vw;
+    
+    h3{
+        font-size: 5vw;
+        color: $white;
+    }
+}
