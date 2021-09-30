@@ -4,13 +4,19 @@ import { Card } from "./Card";
 export class TaskList extends Component {
   render() {
     return (
-      <div>
-          {Array.of('Casa', 'Estudos', 'Casa', 'Trabalho', 'Trabalho').map(category =>{
-              return(
-                <Card/>
-              );
-          })}
-      </div>
+      <ul>
+        {this.props.tasks.map((task, index) => {
+          return (
+            <li key={index}>
+              <Card
+                title={task.title}
+                description={task.description}
+                type={task.type}
+              />
+            </li>
+          );
+        })}
+      </ul>
     );
   }
 }
