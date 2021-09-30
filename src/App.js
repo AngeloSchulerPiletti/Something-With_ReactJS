@@ -1,6 +1,14 @@
+import { Header } from "./components/Header";
+import { Main } from "./components/Main";
+import { Footer } from "./components/Footer";
+
 function App() {
   return (
-    <h1>Isso é react</h1>
+    <div>
+      <Header/>
+      <Main/>
+      <Footer/>
+    </div>
   );
 }
 
